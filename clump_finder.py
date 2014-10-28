@@ -1,5 +1,4 @@
 from most_common_kmers import getKmerDictionary
-from reverse_complement import get_reverse_complement
 def find_clumps(sequence, window_length, kmer_length, kmer_reps):
     kmers = getKmerDictionary(sequence, kmer_length)
     results = []

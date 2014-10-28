@@ -19,7 +19,6 @@ if __name__ == '__main__':
         if line_count > 1:
             raise Exception('input file should be just one line')
     pattern = 'CTTGATCAT'
-    #pattern = get_reverse_complement(pattern)
     hit_count = 0
     for hit_index in sequence_finder(sequence, pattern):
         hit_count+=1
