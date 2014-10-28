@@ -3,9 +3,6 @@ def find_clumps(sequence, window_length, kmer_length, kmer_reps):
     kmers = getKmerDictionary(sequence, kmer_length)
     results = []
     for kmer in kmers:
-        frequency = len(kmers[kmer])
-        if frequency < kmer_reps:
-            continue
         hits = kmers[kmer]
         start_index = 0
         end_index = kmer_reps - 1
@@ -19,7 +16,7 @@ def find_clumps(sequence, window_length, kmer_length, kmer_reps):
 if __name__ == '__main__':
     sequence = ''
     line_count = 0
-    for line in open('/Users/rbush/git/coursera/bioinfomatics1/E-coli.txt', 'r'):
+    for line in open('/Users/rbush/git/bioinfomatics1/E-coli.txt', 'r'):
         sequence = line
         line_count += 1
         if line_count > 1:
