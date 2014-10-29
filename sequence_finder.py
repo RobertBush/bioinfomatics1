@@ -1,5 +1,4 @@
-from reverse_complement import get_reverse_complement
-from numpy import diff
+
 def sequence_finder(sequence, pattern):
     sequence_len = len(sequence)
     pattern_len = len(pattern)
